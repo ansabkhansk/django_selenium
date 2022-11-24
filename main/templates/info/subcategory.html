@@ -1,0 +1,17 @@
+{% extends "main/base.html" %}
+
+{% block title %}
+Sub Category
+{% endblock %}
+
+{% block heading %}
+Sub-Category
+{% endblock %}
+
+{% block content %}
+<ul id="myList">
+    {% for subcategory in Subcategories %}
+        <li><a href="/jobs">{{subcategory.sub_category}}</a></li>
+    {% endfor %}
+</ul>
+{% endblock %}

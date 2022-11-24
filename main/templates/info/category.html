@@ -1,0 +1,23 @@
+{% extends "main/base.html" %}
+
+{% block title %}
+Category
+{% endblock %}
+
+{% block heading %}
+Category
+{% endblock %}
+
+{% block content %}
+<ul id="myList">
+    {% for category in Categories %}
+      {% for subcategory in Subcategories|slice:":1" %}
+        {% if category.category == subcategory.category.category %}
+          <li><a href="/subcategory">{{category.category}}</a></li>
+        {% else %}
+          <li>{{category.category}}</li>
+        {% endif %}
+      {% endfor %}
+    {% endfor %}
+</ul>
+{% endblock %}

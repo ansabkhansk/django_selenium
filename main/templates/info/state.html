@@ -1,0 +1,20 @@
+{% extends "main/base.html" %}
+
+{% block title %}
+State
+{% endblock %}
+
+{% block heading %}
+State
+{% endblock %}
+
+{% block search %}  <!-- To remove search box  -->
+{% endblock %}
+
+{% block content %}
+<ul id="myList">
+    {% for state in States %}
+        <li><a href="/category">{{state.state}}</a></li>
+    {% endfor %}
+</ul>
+{% endblock %}

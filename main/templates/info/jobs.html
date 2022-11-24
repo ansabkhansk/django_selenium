@@ -1,0 +1,18 @@
+{% extends "main/base.html" %}
+
+{% block title %}
+Jobs
+{% endblock %}
+
+{% block heading %}
+Jobs
+{% endblock %}
+
+{% block content %}
+<ul id="myList">
+    {% for job in Jobs|slice:":2" %}
+        <li>{{job.position}} <br>
+            <p class="ms-4">{{job.location}}</p></li>
+    {% endfor %}
+</ul>
+{% endblock %}
